@@ -24,10 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +31,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.body {
+  padding: 25px;
+  margin-top: 35px;
+}
+
+.textBlock {
+  margin-bottom: 15px;
+  text-align: left;
+  color: grey;
+}
+
+.formField {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  align-self: left;
+}
+
+.autoDraftInput {
+  width: 40vw;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.requestTextInput {
+  width: 60vw;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.requestDescriptionInput {
+  width: 60vw;
+  height: 250px;
+  padding-left: 5px;
+}
+
+.cancelButton {
+  background-color: grey;
+  color: white;
+  height: 35px;
+  width: 150px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.submitButton {
+  background-color: green;
+  color: white;
+  height: 35px;
+  width: 150px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.table {
+  margin: 0 10% 10% 10%;
+  width: 80%;
 }

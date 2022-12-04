@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Nav from './Nav'
+import Menu from './Menu'
+import Routes from './Routes'
 
-function App() {
+const App = () => {
+  const [menuDisplayed, setMenuDisplayed] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"
+      style={{
+        height: "100vh",
+        width: "100vw"
+      }}
+    >
+      <Nav
+        menuDisplayed={menuDisplayed}
+        setMenuDisplayed={setMenuDisplayed}
+      />
+      {menuDisplayed ? (
+        <Menu />
+      ):null}
+
+      <div className="body">
+        {Routes}
+      </div>
+
+      {' '}
+      <div style={{ marginTop: "70vh" }}>
+        <ol>integrations
+            <li>mailchimp</li>
+            <li>ach payments</li>
+            <li>rentler, zillow, rentCafe?</li>
+        </ol>
+        <ol>icebox
+            <li>quickbooks</li>
+            <li>other integrations</li>
+        </ol>
+      </div>
     </div>
   );
 }
